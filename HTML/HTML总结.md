@@ -2,7 +2,7 @@
 
 HTML的知识点又多又散，在此记录，更新。（20200202）
 
-## 0 HTML基础
+## &sect;0 HTML基础
 
 HTML，即超文本标记语言（**Hyper Text Markup Language**）。
 
@@ -27,7 +27,7 @@ HTML，即超文本标记语言（**Hyper Text Markup Language**）。
         </body>
     </html>
 
-## 1 head标签
+## &sect;1 head标签
 
 例如：
 
@@ -37,7 +37,7 @@ HTML，即超文本标记语言（**Hyper Text Markup Language**）。
         <title>About HTML</title>
     </head>
 
-### 1.1 title标签
+### &sect;1.1 title标签
 
 title标签的作用：
 
@@ -47,7 +47,7 @@ title标签的作用：
 
 title要能够准确的表达出当前网页的核心内容。
 
-### 1.2 meta标签
+### &sect;1.2 meta标签
 
 meta是非常有用的辅助性标签。
 
@@ -80,9 +80,9 @@ meta是非常有用的辅助性标签。
 定义文档的字符编码，通常使用"UTF-8"。
 
 
-## 2 标题、段落、链接
+## &sect;2 标题、段落、链接
 
-### 2.1 标题
+### &sect;2.1 标题
 
 <h1\>到<h6\>，6种等级的标题。
 
@@ -94,7 +94,7 @@ meta是非常有用的辅助性标签。
 
 >搜索引擎会密切关注h1标签中的关键字。搜索引擎抓取时希望关键词覆盖网页的主要主题，避免使用与页面内容无关的关键字。
 
-### 2.2 段落
+### &sect;2.2 段落
 
 常用标签：
 
@@ -109,7 +109,7 @@ meta是非常有用的辅助性标签。
 <hr\>标签：插入横线分割行，单标签。
 
 
-### 2.3 链接
+### &sect;2.3 链接
 
 超链接用<a\>标签。
 
@@ -140,9 +140,9 @@ target：_self，默认，从当前页面直接跳转到目的网址。
 
     摘自：https://www.jianshu.com/p/f51a1d2f9172 可乐Cola
 
-## 3 列表和表格
+## &sect;3 列表和表格
 
-### 3.1 列表
+### &sect;3.1 列表
 
 **无序列表**
 
@@ -176,7 +176,7 @@ ol标签
     <li>tornado</li>
 </ol>
 
-### 3.2 表格
+### &sect;3.2 表格
 
 <table\>标签
 
@@ -258,7 +258,7 @@ ol标签
     </tbody>
 </table>
 
-## 4 表单
+## &sect;4 表单
 
 <form\>标签用于为用户输入创建 HTML 表单。
 
@@ -316,4 +316,98 @@ ol标签
     <br>
 </form>
 
-待续
+## &sect;5 行内和块级元素
+
+HTML元素大多都是行内元素或是块级元素
+
+### 5.1 行内元素
+
+一个行内元素只占据它对应标签的边框所包含的空间。下面这个例子说明了行内元素的作用范围：
+
+<p>This <strong>strong</strong> is an <strong>inline</strong> element; its background has been colored to display both the beginning and end of the inline element's influence</p>
+
+    <p>This <strong>strong</strong> is an <strong>inline</strong> element; its background has been colored to display both the beginning and end of the inline element's influence</p>
+
+<strong\>标签是一个行内元素。
+
+一般情况下，行内元素只能包含数据和其他行内元素。
+而块级元素可以包含行内元素和其他块级元素。这种结构上的包含继承区别可以使块级元素创建比行内元素更”大型“的结构。
+
+默认情况下，行内元素不会以新行开始，而块级元素会新起一行。
+
+<span\> 元素是内联元素，可用作文本的容器。
+
+<span\> 元素也没有特定的含义。
+
+当与 CSS 一同使用时，<span\> 元素可用于为部分文本设置样式属性。
+
+### 5.2 块级元素
+
+块级元素占据其父元素（容器）的整个空间，因此创建了一个“块”。
+
+<p>This <strong>strong</strong> is an inline element; its background has been colored to display both the beginning and end of the inline element's influence</p><p>This <strong>strong</strong> is an inline element; its background has been colored to display both the beginning and end of the inline element's influence</p>
+
+    <p>This <strong>strong</strong> is an inline element; its background has been colored to display both the beginning and end of the inline element's influence</p><p>This <strong>strong</strong> is an inline element; its background has been colored to display both the beginning and end of the inline element's influence</p>
+
+<p\>标签是一个块级元素。
+
+默认情况下，块级元素会新起一行。
+
+一般块级元素可以包含行内元素和其他块级元素。这种结构上的包含继承区别可以使块级元素创建比行内元素更”大型“的结构。
+
+<div\> 元素是块级元素，它是可用于组合其他 HTML 元素的容器。
+
+<div\> 元素没有特定的含义。除此之外，由于它属于块级元素，浏览器会在其前后显示折行。
+
+如果与 CSS 一同使用，<div\> 元素可用于对大的内容块设置样式属性。
+
+
+## &sect;6 HTML字符实体
+
+在 HTML 中，某些字符是预留的。
+
+在 HTML 中不能使用小于号（<）和大于号（>），这是因为浏览器会误认为它们是标签。
+
+如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（character entities）。
+
+|字符实体|实体名称|描述|
+|----|----|----|
+|&nbsp;|\&nbsp;|空格|
+|&lt;|\&lt;|小于号|
+|&gt;|\&gt;|大于号|
+|&times;|\&times;|称号|
+|&divide;|\&divide;|除号|
+|&amp;|\&amp;|和号|
+|&apos;|\&apos;|撇号|
+|&quot;|\&quot;|引号|
+|&cent;|\&cent;|分（cent）|
+|&pound;|\&pound;|镑（pound）|
+|&yen;|\&yen;|元|
+|&sect;|\&sect;|小节号|
+|&copy;|\&copy;|版权号|
+|&reg;|\&reg;|注册商标|
+|&trade;|\&trade;|商标|
+
+
+
+## &sect;7 语意标签
+
+<header\>：页眉通常包括网站标志、主导航、全站链接以及搜索框。
+
+<nav\>：标记导航，仅对文档中重要的链接群使用。
+
+<main\>：页面主要内容，一个页面只能使用一次。如果是web应用，则包围其主要功能。
+
+<article\>：定义外部的内容，其中的内容独立于文档的其余部分。
+
+<section\>：定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。
+
+<aside\>：定义其所处内容之外的内容。如侧栏、文章的一组链接、广告、友情链接、相关产品列表等。
+
+<footer\>：页脚，只有当父级是body时，才是整个页面的页脚。
+
+摘自 https://blog.csdn.net/eeeecw/article/details/80591511 易刺猬
+
+## &sect;8 结语
+
+首次完成于20200203
