@@ -4,12 +4,59 @@ HTML还断断续续了解过，CSS很少接触，系统的记录一下CSS的基�
 
 ## &sect;1 CSS的使用方式
 
-行内，内联，外部文件
+CSS样式代码插入HTML的形式分为3种：
+
+* 内联 Inline style
+* 内部 Internal style sheet
+* 外部 External style sheet
+
+### &sect;1.1 内联样式
+
+    <p style="color:sienna;margin-left:20px">这是一个段落。</p>
+
+<p style="color:sienna;margin-left:20px">这是一个段落。</p>
+
+在标签内的style属性，就是CSS的内联形式。
+
+不建议使用这种方式，无法将HTML和CSS分开管理。
+
+### &sect;1.2 内部样式
+
+当单个文档需要特殊的样式时，可以使用内部样式， `<style>` 标签在文档头部定义内部样式表。
+
+    <head>
+      <style>
+        hr {color:sienna;}
+        p {margin-left:20px;}
+        body {background-image:url("images/back40.gif");}
+      </style>
+    </head>
+
+### &sect;1.3 外部样式
+
+将样式和HTML区分开，写入一个css文件单独管理，是最理想的使用方式。
+
+    <head>
+      <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+
+在`<head>`标签中使用`<link>`标签，浏览器会从文件“mystyle.css”中读取样式声明，渲染HTML页面。
 
 ## &sect;2 CSS selection
 
-id，class，元素
+CSS中通过选择器对该元素设置样式。
 
+|选择器|例子|描述|
+|----|----|----|
+|.class|.intro|选择所有class="intro"的元素|
+|#id|#firstname|选择id="firstname"的元素|
+||||
+||||
+||||
+||||
+||||
+||||
+||||
 ## &sect;3 Font
 
 字体相关属性
