@@ -50,13 +50,16 @@ CSS中通过选择器对该元素设置样式。
 |----|----|----|
 |.class|.intro|选择所有class="intro"的元素|
 |#id|#firstname|选择id="firstname"的元素|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|element|h1|选择所有h1标签|
+|element,element|p, h2|选择所有p和h2元素|
+|element element|div p|选择div元素内部的p元素|
+|*|*|全局所有元素|
+|:link|a:link|选择所有未被访问的链接|
+|:visited|a:visited|选择所有已被访问的链接|
+|:hover|a:hover|选择所有鼠标选中的链接|
+|:active|a:active|选中所有激活的链接|
+|:focus|input:focus|选中获得焦点的input|
+
 ## &sect;3 Font
 
 字体相关属性
